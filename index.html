@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MockAPI CRUD Operations</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>User Management System</h1>
+        <p>JavaScript CRUD Operations using MockAPI</p>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2 id="formTitle">Add New User</h2>
+
+            <form id="userForm">
+                <input type="hidden" id="userId">
+
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter email" required>
+
+                <label for="phone">Phone</label>
+                <input type="text" id="phone" placeholder="Enter phone number" required>
+
+                <button type="submit" id="submitBtn">Add User</button>
+                <button type="button" id="cancelBtn" hidden>Cancel Edit</button>
+            </form>
+        </section>
+
+        <section class="search-section">
+            <h2>Search User by ID</h2>
+
+            <div class="search-box">
+                <input type="text" id="searchId" placeholder="Enter user ID">
+                <button type="button" id="searchBtn">Search</button>
+            </div>
+
+            <div id="searchResult"></div>
+        </section>
+
+        <section class="users-section">
+            <div class="section-heading">
+                <h2>All Users</h2>
+                <button type="button" id="refreshBtn">Refresh</button>
+            </div>
+
+            <p id="message" role="status">Loading users...</p>
+            <div id="userList" class="user-list"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Task 15.2 | MockAPI CRUD Project</p>
+    </footer>
+
+</body>
+</html>
